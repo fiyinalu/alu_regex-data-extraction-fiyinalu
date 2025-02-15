@@ -8,10 +8,10 @@ def extract_data(text):
     hashtag_pattern = r"#\w+"  # Matches hashtags
     
     # Extracting data
-    emails = re.findall(email_pattern, text)
-    urls = re.findall(url_pattern, text)
-    phone_numbers = re.findall(phone_pattern, text)
-    hashtags = re.findall(hashtag_pattern, text)
+    emails = ", ".join(re.findall(email_pattern, text))
+    urls = ", ".join(re.findall(url_pattern, text))
+    phone_numbers = ", ".join(re.findall(phone_pattern, text))
+    hashtags = ", ".join(re.findall(hashtag_pattern, text))
     
     # Displaying extracted data
     print("Extracted Emails:", emails)
